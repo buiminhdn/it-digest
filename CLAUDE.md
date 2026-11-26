@@ -66,7 +66,9 @@ Secrets cần trên GitHub: `GEMINI_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CH
 - Telegram viết tiếng Việt; prompt cấm câu kiểu "video giới thiệu…".
 
 ## Trạng thái (26/11/2026)
-- Mới tách repo, chưa có kênh trong `channels.txt`, chưa lên GitHub, chưa có secrets.
+- **Đã lên GitHub**: repo public `buiminhdn/it-digest`, đủ 3 secrets. Bot Telegram riêng `@mit_digest_bot`.
+  Dùng chung Gemini key với yt-digest (chung quota free). Lượt chạy tay đầu tiên (26/11) thành công, gửi Telegram được.
+- Key local để trong `.env.local` (đã gitignore).
 - Ghi chú kỹ thuật kế thừa từ yt-digest: ID video có thể bắt đầu bằng `_` → `load_day` chỉ loại đúng `_digest.json`/`_failed.json`.
 - Bot commit kết quả mỗi lượt → nhớ `git pull` trước khi sửa local.
 
