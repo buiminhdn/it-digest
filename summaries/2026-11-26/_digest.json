@@ -1,0 +1,21 @@
+{
+  "highlights": [
+    "API response chỉ là trạng thái tại một thời điểm, cần webhook và đối soát để tìm sự thật.",
+    "Hệ thống phân tán chỉ đạt At Least Once ảo, dễ bị lặp giao dịch khi Consumer khởi động lại.",
+    "Cần dùng Idempotency với Unique Key và State Machine để khóa chặt quy trình chống lặp."
+  ],
+  "themes": [
+    {
+      "title": "Thách thức trong hệ thống phân tán",
+      "points": [
+        "Client dễ gặp lỗi timeout trong khi backend vẫn tiếp tục xử lý giao dịch ngầm.",
+        "Kafka, RabbitMQ và SQS đều sử dụng cơ chế At Least Once làm phát sinh lỗi nhân bản.",
+        "Senior chủ động xây dựng business logic bất chấp sự kiện bị lặp lại trong hệ thống."
+      ],
+      "video_ids": [
+        "SGo1zYPHyKQ",
+        "q6V6M5j3GGc"
+      ]
+    }
+  ]
+}

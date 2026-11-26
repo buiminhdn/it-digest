@@ -1,0 +1,50 @@
+{
+  "video_id": "q6V6M5j3GGc",
+  "title": "Tại Sao \"Exactly Once\" Chỉ Là Một Giấc Mơ?",
+  "channel": "TechCraft Official",
+  "channel_id": "UCh-RdIcgtv6aCLp3nUKUklQ",
+  "published": "2026-11-25T14:00:31+00:00",
+  "url": "https://www.youtube.com/watch?v=q6V6M5j3GGc",
+  "thumbnail": "https://i.ytimg.com/vi/q6V6M5j3GGc/mqdefault.jpg",
+  "core": "Hệ thống phân tán thực tế chỉ đạt mức Exactly Once ảo; các message broker phổ biến như Kafka, RabbitMQ đều dùng cơ chế At Least Once, dễ dẫn đến lỗi xử lý hai lần nếu Consumer khởi động lại.",
+  "sections": [
+    {
+      "heading": "Sự cố thanh toán và bài toán gửi lại",
+      "timestamp": "00:44",
+      "points": [
+        "Sự cố xảy ra khi Consumer ghi database thành công nhưng chưa kịp gửi tín hiệu ACK về Kafka.",
+        "Khi Consumer khởi động lại, message chưa ACK được đọc lại, dẫn đến giao dịch bị tính tiền hai lần."
+      ]
+    },
+    {
+      "heading": "Bug thực sự và cấu trúc broker",
+      "timestamp": "03:04",
+      "points": [
+        "Kafka, RabbitMQ, SQS đều có mức đảm bảo giao nhận mặc định là At Least Once.",
+        "Tin rằng một event chỉ đi một lần duy nhất là niềm tin sai lầm trong mạng lưới phức tạp."
+      ]
+    },
+    {
+      "heading": "Giải pháp ở tầng Business Logic",
+      "timestamp": "04:10",
+      "points": [
+        "Tính năng Exactly Once không có sẵn mà phải tự xây dựng ở tầng Business Logic.",
+        "Sử dụng Idempotency với Unique Key, Deduplication hoặc State Machine và Ledger để khóa chặt quy trình."
+      ]
+    },
+    {
+      "heading": "Tư duy Senior Engineer",
+      "timestamp": "05:00",
+      "points": [
+        "Junior ám ảnh tìm môi trường hoàn hảo, trong khi Senior xây dựng logic bất chấp sự kiện lặp lại.",
+        "Kiến trúc phần mềm xuất sắc phải luôn bảo vệ một chân lý duy nhất bất chấp message bị nhân bản."
+      ]
+    }
+  ],
+  "topics": [
+    "Exactly Once",
+    "Kafka",
+    "System Design"
+  ],
+  "summarized_at": "2026-11-26T03:15:40.378299+00:00"
+}

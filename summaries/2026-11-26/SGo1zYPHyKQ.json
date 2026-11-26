@@ -1,0 +1,39 @@
+{
+  "video_id": "SGo1zYPHyKQ",
+  "title": "Tại Sao API Response KHÔNG PHẢI Là Sự Thật Cuối Cùng?",
+  "channel": "TechCraft Official",
+  "channel_id": "UCh-RdIcgtv6aCLp3nUKUklQ",
+  "published": "2026-11-24T14:00:39+00:00",
+  "url": "https://www.youtube.com/watch?v=SGo1zYPHyKQ",
+  "thumbnail": "https://i.ytimg.com/vi/SGo1zYPHyKQ/mqdefault.jpg",
+  "core": "API response chỉ là bức ảnh chụp trạng thái tại một thời điểm, không phải sự thật cuối cùng. Hệ thống cần các cơ chế bổ trợ như webhook, đối soát để tìm ra sự thật.",
+  "sections": [
+    {
+      "heading": "API Response không phải sự thật",
+      "timestamp": "01:05",
+      "points": [
+        "Client báo lỗi timeout khi chờ quá lâu nhưng backend vẫn đang xử lý giao dịch."
+      ]
+    },
+    {
+      "heading": "Cơ chế xác minh sự thật",
+      "timestamp": "02:54",
+      "points": [
+        "Sử dụng webhook và callback để nhận thông báo tự động từ hệ thống."
+      ]
+    },
+    {
+      "heading": "Nguồn sự thật cốt lõi",
+      "timestamp": "04:30",
+      "points": [
+        "Sổ cái ledger, audit log và chuỗi đối soát không mệt mỏi là phán quan cuối cùng."
+      ]
+    }
+  ],
+  "topics": [
+    "API",
+    "Backend",
+    "System Architecture"
+  ],
+  "summarized_at": "2026-11-26T03:15:40.378299+00:00"
+}
