@@ -1,0 +1,45 @@
+name: IT Digest
+
+on:
+  schedule:
+    - cron: "0 23 * * *"    # 06:00 sáng giờ Việt Nam (23:00 UTC), lệch yt-digest 30 phút. Đổi giờ ở đây.
+  workflow_dispatch:         # cho phép bấm "Run workflow" để chạy tay
+
+permissions:
+  contents: write
+
+concurrency:
+  group: it-digest
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Cài thư viện
+        run: pip install -r requirements.txt
+
+      - name: Tìm video mới, tóm tắt, gửi Telegram
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python digest/main.py
+
+      - name: Lưu kết quả vào repo
+        if: always()
+        run: |
+          git config user.name "it-digest-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state summaries
+          git diff --staged --quiet || git commit -m "digest $(date -u +%F)"
+          git push
+
