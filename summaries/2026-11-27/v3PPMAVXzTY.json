@@ -1,0 +1,34 @@
+{
+  "video_id": "v3PPMAVXzTY",
+  "title": "Tại Sao Database Không Bao Giờ Là Nguồn Sự Thật Duy Nhất?138 Database Không Là Sự Thật",
+  "channel": "TechCraft Official",
+  "channel_id": "UCh-RdIcgtv6aCLp3nUKUklQ",
+  "published": "2026-11-26T14:00:00+00:00",
+  "url": "https://www.youtube.com/watch?v=v3PPMAVXzTY",
+  "thumbnail": "https://i.ytimg.com/vi/v3PPMAVXzTY/mqdefault.jpg",
+  "core": "Database truyền thống chỉ lưu trạng thái hiện tại bằng cách ghi đè nên làm mất toàn bộ lịch sử và bất lực khi cần truy vết lỗi. Nguồn sự thật duy nhất của hệ thống phải là sổ cái (ledger) lưu toàn bộ chuỗi sự kiện theo thời gian.",
+  "sections": [
+    {
+      "heading": "Hạn chế của database truyền thống",
+      "timestamp": "01:09",
+      "points": [
+        "Cơ sở dữ liệu chỉ lưu một kết quả cuối cùng tại thời điểm hiện tại và xóa sạch ngữ cảnh quá khứ.",
+        "Khi xảy ra lỗi dữ liệu, hệ thống ghi đè không thể trả lời ai đã sửa, vào lúc nào và tại sao."
+      ]
+    },
+    {
+      "heading": "Kiến trúc sổ cái (Ledger)",
+      "timestamp": "02:54",
+      "points": [
+        "Hệ thống tài chính dùng ledger để ghi nhận tuần tự mọi biến động và không bao giờ xóa lịch sử.",
+        "Số dư thực chất là giá trị phái sinh được tính toán lại từ chuỗi giao dịch chứ không phải dữ liệu tĩnh."
+      ]
+    }
+  ],
+  "topics": [
+    "Kiến trúc hệ thống",
+    "Ledger",
+    "Cơ sở dữ liệu"
+  ],
+  "summarized_at": "2026-11-27T04:45:49.772378+00:00"
+}

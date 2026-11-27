@@ -1,0 +1,6 @@
+{
+  "highlights": [
+    "Database truyền thống chỉ lưu trạng thái hiện tại bằng cách ghi đè nên làm mất toàn bộ lịch sử và bất lực khi cần truy vết lỗi. Nguồn sự thật duy nhất của hệ thống phải là sổ cái (ledger) lưu toàn bộ chuỗi sự kiện theo thời gian."
+  ],
+  "themes": []
+}
